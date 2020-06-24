@@ -1,6 +1,6 @@
 pipeline{
 environment{
-registry = "sameerm/capstone"
+registry = "sameer/capstone"
 registryCredential = 'dockercred'
 
 }
