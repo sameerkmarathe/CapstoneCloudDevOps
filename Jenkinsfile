@@ -29,7 +29,7 @@ stage('Build') {
          }
          stage('Deploy') {
               steps {
-                  withAWS(region:'us-west-2',credentials:'udacity1') {
+                  withAWS(region:'us-east-2',credentials:'aws-static') {
                   sh "aws eks --region us-west-2 update-kubeconfig --name udacity"
                   sh 'kubectl apply -f app.yml'
                   sh 'kubectl apply -f exposeapp.yml'
