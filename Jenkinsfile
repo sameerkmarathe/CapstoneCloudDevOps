@@ -31,8 +31,8 @@ stage('Build docker') {
               steps {
                   withAWS(region:'us-east-2',credentials:'aws-static') {
                   sh "aws eks --region us-east-2 update-kubeconfig --name udacitycapstone"
-                  sh 'kubectl apply -f app.yml'
-                  sh 'kubectl apply -f exposeapp.yml'
+                  sh 'kubectl apply -f website.yml'
+                  sh 'kubectl apply -f exposewebsite.yml'
                   }
               }
          }
