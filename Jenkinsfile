@@ -1,7 +1,7 @@
 pipeline{
 environment{
 registry = "sameerm/capstone"
-registryCredential = 'dockercre'
+registryCredential = 'dockercred'
 
 }
 agent any
