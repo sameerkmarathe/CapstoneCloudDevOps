@@ -7,30 +7,30 @@ registryCredential = 'dockercred'
 agent any
 stages{
 
- stage('Lint') {
+ stage('Lint HTML and docker') {
               steps {
                   sh 'hadolint Dockerfile'
                   sh 'tidy -q -e *.html'
               }
         }
-stage('Build') {
+stage('Build docker') {
               steps {
-                  sh 'docker build --tag=timmlot/capstone .'
+                  sh 'docker build --tag=sameerm/capstone .'
               }
          }
-         stage('Upload image to Docker') {
+         stage('Image upload to Docker') {
               steps {
                 script {
                   docker.withRegistry( '', registryCredential ) {
-                    sh 'docker push timmlot/capstone'
+                    sh 'docker push sameerm/capstone'
                   }
                 }
               }
          }
-         stage('Deploy') {
+         stage('Deploy image to EKS') {
               steps {
                   withAWS(region:'us-east-2',credentials:'aws-static') {
-                  sh "aws eks --region us-west-2 update-kubeconfig --name udacity"
+                  sh "aws eks --region us-east-2 update-kubeconfig --name udacitycapstone"
                   sh 'kubectl apply -f app.yml'
                   sh 'kubectl apply -f exposeapp.yml'
                   }
