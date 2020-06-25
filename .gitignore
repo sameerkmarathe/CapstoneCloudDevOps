@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 todo.txt
+.c9
 *.py[cod]
 *$py.class
 
