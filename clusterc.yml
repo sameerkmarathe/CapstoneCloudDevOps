@@ -4,7 +4,7 @@ kind: ClusterConfig
 
 metadata:
   name: udacitycapstone
-  region: us-east-1
+  region: us-east-2
 
 managedNodeGroups:
   - name: udacitycapstone-1
