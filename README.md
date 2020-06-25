@@ -43,14 +43,18 @@ Download the credentials for the user in a safe place.
 
 Create or clone the HTMl along with `*.conf` file which will be displayed upon successful build. You can also add style and script in this scheme.
 
-### Dockerfile
+### Setup Jenkins 
 
 Install Jenkins using the link given above. Upon successful installation, you can start jenkins using `sudo systemctl start jenkins` for ubuntu or `sudo service jenkins start`
 for CentOS/Amazon-Linux. One can look for specific commands for specific OS in the installation link provided above. Upon successful installation, jenkins should ask for a secret access key
 get the secret access key by typing `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` in terminal. Copy and paste the output and proceed with 
 suggested plugins. Create a new admin account upon prompt.
 Now, Go to manage plugins options and install plugins for `blue-ocean(optional), pipeline-aws, docker, kubectl`. Restart jenkins upon succesful
-installation. 
+installation. Log into jenkins again and go to manage `jenkins->manage credentials->jenkins` and add global credentials for the aws user created in the first step and docker-hub credentials.
 
+### Create files
 
+Create configuration files for jenkins docker and EKS cluster referring to the one in the repo. Note that it should encapsulate our `html` and config file along with exposing port `80`. Jekinsfile should have linting stage to check that `HTML` and `DOCKERFILE` are written properly.
+
+### Deploy Website
 
