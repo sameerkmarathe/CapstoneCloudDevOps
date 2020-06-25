@@ -58,3 +58,9 @@ Create configuration files for jenkins docker and EKS cluster referring to the o
 
 ### Deploy Website
 
+Login into jenkins and open blue ocean. Create a new github pipeline, create github personal access token and open the repository containing the files above. 
+From EC2 terminal run `createCluster.sh`. It will take some time to create the cluster. Meanwhile, run the pipeline to observe if all steps but the last is running okay.
+Finally, after the EKS cluster is created build again and you should be able to access the application using the `loadbalancer` URL. 
+
+*Note:* If you are getting the error `kubectl:command not found` just move kubectl binaries from `/usr/bin/local` to `/usr/bin` or add `/usr/local/bin` to your `PATH` variable.
+
