@@ -50,7 +50,7 @@ for CentOS/Amazon-Linux. One can look for specific commands for specific OS in t
 get the secret access key by typing `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` in terminal. Copy and paste the output and proceed with 
 suggested plugins. Create a new admin account upon prompt.
 Now, Go to manage plugins options and install plugins for `blue-ocean(optional), pipeline-aws, docker, kubectl`. Restart jenkins upon succesful
-installation. Log into jenkins again and go to manage `jenkins->manage credentials->jenkins` and add global credentials for the aws user created in the first step and docker-hub credentials.
+installation. Log into jenkins again and go to manage `jenkins-> manage credentials-> jenkins` and add global credentials for the aws user created in the first step and docker-hub credentials.
 
 ### Create files
 
