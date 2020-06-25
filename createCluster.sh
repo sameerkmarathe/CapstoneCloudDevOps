@@ -1,1 +1,1 @@
-eksctl create cluster -f cluster.yml
+eksctl create cluster -f clusterc.yml
