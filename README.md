@@ -20,11 +20,11 @@ Here we explain step by step deployment with prerequisities required for the pro
 
 ## Prerequisites
 
-- !(NGINX)[https://www.nginx.com/resources/wiki/start/topics/tutorials/install/]
-- (Tidy)[https://www.html-tidy.org/]
-- (Eksctl)[https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html]
-- (Kubectl)[https://kubernetes.io/docs/tasks/tools/install-kubectl/]
-- (Docker(preinstalled))[https://docs.docker.com/engine/install/]
+- [NGINX](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
+- [Tidy](https://www.html-tidy.org/)
+- [Eksctl](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html)
+- [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [Docker(preinstalled)](https://docs.docker.com/engine/install/)
 - 
 
 
