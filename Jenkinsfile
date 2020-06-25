@@ -1,6 +1,6 @@
 pipeline{
 environment{
-registry = "sameerm/capstone"
+registry = "sam2g/capstone"
 registryCredential = 'dockercred'
 
 }
@@ -15,14 +15,14 @@ stages{
         }
 stage('Build docker') {
               steps {
-                  sh 'docker build --tag=sameerm/capstone .'
+                  sh 'docker build --tag=sam2g/capstone .'
               }
          }
          stage('Image upload to Docker') {
               steps {
                 script {
                   docker.withRegistry( '', registryCredential ) {
-                    sh 'docker push sameerm/capstone'
+                    sh 'docker push sam2g/capstone'
                   }
                 }
               }
